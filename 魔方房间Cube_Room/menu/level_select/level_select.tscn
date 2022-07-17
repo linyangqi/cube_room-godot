@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=3 uid="uid://kn3j0lfr3peb"]
+
+[ext_resource type="Theme" uid="uid://b1ksuspm4q4f6" path="res://menu/theme/main_theme.tres" id="1_ubdsp"]
+[ext_resource type="Texture2D" uid="uid://hj6wx4ctsv7r" path="res://menu/main/backgroung_img.png" id="2_f80bu"]
+[ext_resource type="PackedScene" uid="uid://beihq54y3rldy" path="res://menu/main/back_to_main_menu.tscn" id="3_ulj0y"]
+[ext_resource type="Script" path="res://menu/main/change_scene_button.gd" id="4_b1dd6"]
+
+[node name="LevelSelect" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("1_ubdsp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.223529, 0.486275, 0.439216, 1)
+
+[node name="BackGround" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.337255)
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_f80bu")
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -512.0
+offset_right = 512.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme = ExtResource("1_ubdsp")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 50
+text = "Levels 关卡"
+horizontal_alignment = 1
+metadata/_edit_layout_mode = 1
+
+[node name="BackToMainMenu" parent="." instance=ExtResource("3_ulj0y")]
+offset_top = -140.0
+offset_bottom = -103.0
+metadata/_edit_layout_mode = 1
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -319.0
+offset_top = -185.0
+offset_right = 236.0
+offset_bottom = 113.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_layout_mode = 1
+
+[node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
+offset_right = 210.0
+offset_bottom = 51.0
+theme_override_constants/h_separation = 20
+columns = 6
+
+[node name="1" type="Button" parent="ScrollContainer/GridContainer"]
+offset_right = 26.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "1
+"
+script = ExtResource("4_b1dd6")
+scene_path = "res://level/formal_levels/level001.tscn"
+
+[node name="2" type="Button" parent="ScrollContainer/GridContainer"]
+offset_left = 46.0
+offset_right = 72.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "2
+"
+script = ExtResource("4_b1dd6")
+scene_path = "res://level/formal_levels/level002.tscn"
+
+[node name="3" type="Button" parent="ScrollContainer/GridContainer"]
+offset_left = 92.0
+offset_right = 118.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "3"
+script = ExtResource("4_b1dd6")
+scene_path = "res://level/formal_levels/level003.tscn"
+
+[node name="4" type="Button" parent="ScrollContainer/GridContainer"]
+offset_left = 138.0
+offset_right = 164.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "4"
+script = ExtResource("4_b1dd6")
+scene_path = "res://level/formal_levels/level004.tscn"
+
+[node name="5" type="Button" parent="ScrollContainer/GridContainer"]
+offset_left = 184.0
+offset_right = 210.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 0
+disabled = true
+text = "5"
+script = ExtResource("4_b1dd6")

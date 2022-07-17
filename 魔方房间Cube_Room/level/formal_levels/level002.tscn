@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bion2qclni1lc"]
+
+[ext_resource type="PackedScene" uid="uid://ld1vhuhi41g1" path="res://level/base/level_base.tscn" id="1_m8smp"]
+[ext_resource type="Script" path="res://level/base/rotation_scripts/rotation_button.gd" id="2_es5kv"]
+[ext_resource type="Script" path="res://level/base/rotation_scripts/rotation_level.gd" id="2_xpcbf"]
+[ext_resource type="PackedScene" uid="uid://crxkykcpoc0bw" path="res://level/grids/rings.tscn" id="4_ejwhp"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_kk1fa"]
+physical_keycode = 69
+
+[sub_resource type="Shortcut" id="Shortcut_ae7wm"]
+events = [SubResource("InputEventKey_kk1fa")]
+
+[node name="Level" instance=ExtResource("1_m8smp")]
+
+[node name="y_0" type="Position3D" parent="Rotations" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
+script = ExtResource("2_xpcbf")
+axis = 0
+hight = 30
+expand = 20
+
+[node name="Player" parent="Entities" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 1)
+
+[node name="Goal" parent="Entities" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 7, 0)
+
+[node name="RotationButton" type="Button" parent="Special" index="0" node_paths=PackedStringArray("rotation_node")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 149.0
+offset_top = 237.0
+offset_right = 253.0
+offset_bottom = 271.0
+shortcut = SubResource("Shortcut_ae7wm")
+text = "Rotate Level (E)"
+script = ExtResource("2_es5kv")
+rotation_node = NodePath("../../Rotations/y_0")
+
+[node name="GridMap" parent="." index="5" instance=ExtResource("4_ejwhp")]
+
+[node name="BackToMainMenu" parent="." index="6"]
+modulate = Color(1, 1, 1, 0)

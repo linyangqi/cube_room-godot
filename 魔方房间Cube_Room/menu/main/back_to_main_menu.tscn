@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://beihq54y3rldy"]
+
+[ext_resource type="Theme" uid="uid://b1ksuspm4q4f6" path="res://menu/theme/main_theme.tres" id="1_3ri20"]
+[ext_resource type="Script" path="res://menu/main/change_scene_button.gd" id="1_5qd47"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_7x8o1"]
+physical_keycode = 16777217
+
+[sub_resource type="Shortcut" id="Shortcut_rgjn7"]
+events = [SubResource("InputEventKey_7x8o1")]
+
+[node name="BackToMainMenu" type="Button"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -93.0
+offset_top = -116.0
+offset_right = 94.0
+offset_bottom = -79.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_3ri20")
+theme_override_font_sizes/font_size = 20
+shortcut = SubResource("Shortcut_rgjn7")
+text = "返回主菜单（ESC）"
+script = ExtResource("1_5qd47")
+scene_path = "res://menu/main/menu.tscn"

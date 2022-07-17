@@ -1,0 +1,8 @@
+A GridMap need to be added
+要另外加一个GridMap作为子节点
+
+you may use gridmap examples in the folder "grids"
+可以使用grids文件夹中的gridmap示例
+
+ps: 1x1x1 cells
+注：单元格大小 1x1x1

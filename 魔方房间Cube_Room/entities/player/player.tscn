@@ -1,0 +1,75 @@
+[gd_scene load_steps=10 format=3 uid="uid://dywibsfvvvatd"]
+
+[ext_resource type="Script" path="res://entities/player/player.gd" id="1_iisag"]
+[ext_resource type="Script" path="res://entities/player/camera_root.gd" id="2_s6cmj"]
+[ext_resource type="Script" path="res://entities/player/spring_arm_distance_adjust.gd" id="3_fh70c"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k6oa"]
+emission_enabled = true
+emission = Color(1, 1, 1, 1)
+emission_energy = 0.5
+clearcoat_enabled = true
+distance_fade_mode = 3
+distance_fade_min_distance = 0.5
+distance_fade_max_distance = 1.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_84td6"]
+material = SubResource("StandardMaterial3D_8k6oa")
+radius = 0.4
+height = 0.8
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_avof4"]
+transparency = 1
+albedo_color = Color(1, 1, 0, 0.501961)
+emission_enabled = true
+emission = Color(1, 1, 0, 1)
+emission_energy = 0.3
+distance_fade_mode = 3
+distance_fade_min_distance = 1.0
+distance_fade_max_distance = 0.5
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_i4pe8"]
+material = SubResource("StandardMaterial3D_avof4")
+size = Vector2(0.05, 0.05)
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_mhpco"]
+radius = 0.4
+
+[sub_resource type="CameraEffects" id="CameraEffects_a8bbp"]
+
+[node name="Player" type="CharacterBody3D" groups=["player"]]
+script = ExtResource("1_iisag")
+
+[node name="Mesh" type="Node3D" parent="."]
+
+[node name="Ball" type="MeshInstance3D" parent="Mesh"]
+mesh = SubResource("SphereMesh_84td6")
+skeleton = NodePath("../..")
+
+[node name="Foot" type="MeshInstance3D" parent="Mesh"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.4, 0)
+mesh = SubResource("PlaneMesh_i4pe8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_mhpco")
+
+[node name="CameraRoot" type="Position3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
+script = ExtResource("2_s6cmj")
+
+[node name="h" type="Node3D" parent="CameraRoot"]
+
+[node name="v" type="Node3D" parent="CameraRoot/h"]
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraRoot/h/v"]
+spring_length = 3.0
+script = ExtResource("3_fh70c")
+
+[node name="Camera" type="Camera3D" parent="CameraRoot/h/v/SpringArm3D"]
+transform = Transform3D(1, -8.88178e-16, -2.05104e-29, 8.88178e-16, 1, -5.96046e-08, 2.64698e-23, 5.96046e-08, 1, 0, 0, 0)
+effects = SubResource("CameraEffects_a8bbp")
+current = true
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 0.5
+omni_range = 2.0
