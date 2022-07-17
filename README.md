@@ -1,4 +1,4 @@
-# 魔方房间 Cube Room (in Godot)
+# 魔方房间 Cube Room (in Godot 4.0)
 A Cube System which allow you to rotate some blocks in GridMap like playing a cube.
 
 可以旋转GridMap中的方块，像转魔方一样。
