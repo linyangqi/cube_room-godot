@@ -1,0 +1,10 @@
+res://entities/ai/wbw/wbw.tscn
+res://menu/theme/main_theme.tres
+res://entities/ai/wbw/controls/wbw_controls.tscn
+res://entities/ai/wbw/controls/moves/wbw_moves.tscn
+res://entities/ai/wbw/controls/expressions/wbw_expressions.tscn
+res://entities/ai/wbw/brain/thoughts/wbw_thoughts.tscn
+res://menu/main/menu.tscn
+res://menu/level_select/level_select.tscn
+res://entities/ai/wbw/brain/knowledge/wbw_knowledge.tscn
+res://entities/ai/wbw/brain/wbw_brain.tscn
