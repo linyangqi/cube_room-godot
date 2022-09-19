@@ -1,12 +1,6 @@
-[gd_resource type="Theme" load_steps=4 format=3 uid="uid://b1ksuspm4q4f6"]
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b1ksuspm4q4f6"]
 
-[ext_resource type="FontData" uid="uid://d3yyn134pfkgg" path="res://menu/theme/fonts/COMICZ.TTF" id="1_ax2rg"]
-[ext_resource type="FontData" uid="uid://cnc0g8bukamkd" path="res://menu/theme/fonts/FZYTK.TTF" id="2_fyldo"]
-
-[sub_resource type="Font" id="Font_0jwqe"]
-data/0 = ExtResource("1_ax2rg")
-data/1 = ExtResource("2_fyldo")
+[ext_resource type="FontFile" uid="uid://dv2613jnwxdh0" path="res://menu/theme/fonts/COMICZ.TTF" id="1_ax2rg"]
 
 [resource]
-default_font = SubResource("Font_0jwqe")
-default_font_size = 30
+default_font = ExtResource("1_ax2rg")

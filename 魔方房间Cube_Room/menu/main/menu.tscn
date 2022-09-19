@@ -1,8 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://d3bqj58eg1aur"]
+[gd_scene load_steps=8 format=3 uid="uid://d3bqj58eg1aur"]
 
-[ext_resource type="Theme" uid="uid://b1ksuspm4q4f6" path="res://menu/theme/main_theme.tres" id="1_clhnj"]
+[ext_resource type="FontFile" uid="uid://dv2613jnwxdh0" path="res://menu/theme/fonts/COMICZ.TTF" id="1_62kwq"]
 [ext_resource type="Texture2D" uid="uid://hj6wx4ctsv7r" path="res://menu/main/backgroung_img.png" id="2_7a03g"]
+[ext_resource type="FontFile" uid="uid://d1lpufcnm8bnk" path="res://menu/theme/fonts/FZYTK.TTF" id="2_a0f25"]
 [ext_resource type="Script" path="res://menu/main/exit_button.gd" id="4_p1dgg"]
+
+[sub_resource type="FontVariation" id="FontVariation_p46w6"]
+base_font = ExtResource("1_62kwq")
+fallbacks = [ExtResource("2_a0f25")]
+
+[sub_resource type="Theme" id="Theme_bllg7"]
+default_font = SubResource("FontVariation_p46w6")
 
 [sub_resource type="GDScript" id="GDScript_iq7tr"]
 script/source = "extends Button
@@ -16,7 +24,7 @@ func _pressed():
 [node name="Menu" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource("1_clhnj")
+theme = SubResource("Theme_bllg7")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -51,28 +59,33 @@ offset_right = 34.0
 offset_bottom = -193.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("1_clhnj")
-metadata/_edit_layout_mode = 1
 metadata/_edit_group_ = true
+metadata/_edit_layout_mode = 1
 
 [node name="Start" type="Button" parent="VBoxContainer"]
-offset_right = 68.0
-offset_bottom = 51.0
+offset_right = 128.0
+offset_bottom = 93.0
+theme_override_font_sizes/font_size = 60
 text = "开始"
+flat = true
 script = SubResource("GDScript_iq7tr")
 scene_path = "res://menu/level_select/level_select.tscn"
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
-offset_top = 55.0
-offset_right = 68.0
-offset_bottom = 106.0
+offset_top = 97.0
+offset_right = 128.0
+offset_bottom = 190.0
+theme_override_font_sizes/font_size = 60
 text = "设置"
+flat = true
 script = SubResource("GDScript_iq7tr")
 scene_path = "res://menu/settings/settings.tscn"
 
 [node name="Exit" type="Button" parent="VBoxContainer"]
-offset_top = 110.0
-offset_right = 68.0
-offset_bottom = 161.0
+offset_top = 194.0
+offset_right = 128.0
+offset_bottom = 287.0
+theme_override_font_sizes/font_size = 60
 text = "退出"
+flat = true
 script = ExtResource("4_p1dgg")

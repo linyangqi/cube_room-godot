@@ -1,7 +1,15 @@
-[gd_scene load_steps=5 format=3 uid="uid://beihq54y3rldy"]
+[gd_scene load_steps=8 format=3 uid="uid://beihq54y3rldy"]
 
-[ext_resource type="Theme" uid="uid://b1ksuspm4q4f6" path="res://menu/theme/main_theme.tres" id="1_3ri20"]
+[ext_resource type="FontFile" uid="uid://dv2613jnwxdh0" path="res://menu/theme/fonts/COMICZ.TTF" id="1_0rljr"]
 [ext_resource type="Script" path="res://menu/main/change_scene_button.gd" id="1_5qd47"]
+[ext_resource type="FontFile" uid="uid://d1lpufcnm8bnk" path="res://menu/theme/fonts/FZYTK.TTF" id="2_na3rw"]
+
+[sub_resource type="FontVariation" id="FontVariation_p46w6"]
+base_font = ExtResource("1_0rljr")
+fallbacks = [ExtResource("2_na3rw")]
+
+[sub_resource type="Theme" id="Theme_r02lh"]
+default_font = SubResource("FontVariation_p46w6")
 
 [sub_resource type="InputEventKey" id="InputEventKey_7x8o1"]
 physical_keycode = 16777217
@@ -20,9 +28,10 @@ offset_right = 94.0
 offset_bottom = -79.0
 grow_horizontal = 2
 grow_vertical = 0
-theme = ExtResource("1_3ri20")
-theme_override_font_sizes/font_size = 20
+theme = SubResource("Theme_r02lh")
+theme_override_font_sizes/font_size = 60
 shortcut = SubResource("Shortcut_rgjn7")
 text = "返回主菜单（ESC）"
+flat = true
 script = ExtResource("1_5qd47")
 scene_path = "res://menu/main/menu.tscn"

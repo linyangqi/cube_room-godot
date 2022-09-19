@@ -1,14 +1,23 @@
-[gd_scene load_steps=5 format=3 uid="uid://kn3j0lfr3peb"]
+[gd_scene load_steps=9 format=3 uid="uid://kn3j0lfr3peb"]
 
+[ext_resource type="FontFile" uid="uid://dv2613jnwxdh0" path="res://menu/theme/fonts/COMICZ.TTF" id="1_477re"]
 [ext_resource type="Theme" uid="uid://b1ksuspm4q4f6" path="res://menu/theme/main_theme.tres" id="1_ubdsp"]
 [ext_resource type="Texture2D" uid="uid://hj6wx4ctsv7r" path="res://menu/main/backgroung_img.png" id="2_f80bu"]
+[ext_resource type="FontFile" uid="uid://d1lpufcnm8bnk" path="res://menu/theme/fonts/FZYTK.TTF" id="2_q38p5"]
 [ext_resource type="PackedScene" uid="uid://beihq54y3rldy" path="res://menu/main/back_to_main_menu.tscn" id="3_ulj0y"]
 [ext_resource type="Script" path="res://menu/main/change_scene_button.gd" id="4_b1dd6"]
+
+[sub_resource type="FontVariation" id="FontVariation_p46w6"]
+base_font = ExtResource("1_477re")
+fallbacks = [ExtResource("2_q38p5")]
+
+[sub_resource type="Theme" id="Theme_7pvab"]
+default_font = SubResource("FontVariation_p46w6")
 
 [node name="LevelSelect" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-theme = ExtResource("1_ubdsp")
+theme = SubResource("Theme_7pvab")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 anchor_right = 1.0
@@ -54,58 +63,68 @@ grow_vertical = 2
 metadata/_edit_layout_mode = 1
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
-offset_right = 210.0
-offset_bottom = 51.0
+offset_right = 305.0
+offset_bottom = 93.0
 theme_override_constants/h_separation = 20
 columns = 6
 
 [node name="1" type="Button" parent="ScrollContainer/GridContainer"]
-offset_right = 26.0
-offset_bottom = 51.0
+offset_right = 45.0
+offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 60
 text = "1
 "
+flat = true
 script = ExtResource("4_b1dd6")
 scene_path = "res://level/formal_levels/level001.tscn"
 
 [node name="2" type="Button" parent="ScrollContainer/GridContainer"]
-offset_left = 46.0
-offset_right = 72.0
-offset_bottom = 51.0
+offset_left = 65.0
+offset_right = 110.0
+offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 60
 text = "2
 "
+flat = true
 script = ExtResource("4_b1dd6")
 scene_path = "res://level/formal_levels/level002.tscn"
 
 [node name="3" type="Button" parent="ScrollContainer/GridContainer"]
-offset_left = 92.0
-offset_right = 118.0
-offset_bottom = 51.0
+offset_left = 130.0
+offset_right = 175.0
+offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 60
 text = "3"
+flat = true
 script = ExtResource("4_b1dd6")
 scene_path = "res://level/formal_levels/level003.tscn"
 
 [node name="4" type="Button" parent="ScrollContainer/GridContainer"]
-offset_left = 138.0
-offset_right = 164.0
-offset_bottom = 51.0
+offset_left = 195.0
+offset_right = 240.0
+offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 60
 text = "4"
+flat = true
 script = ExtResource("4_b1dd6")
 scene_path = "res://level/formal_levels/level004.tscn"
 
 [node name="5" type="Button" parent="ScrollContainer/GridContainer"]
-offset_left = 184.0
-offset_right = 210.0
-offset_bottom = 51.0
+offset_left = 260.0
+offset_right = 305.0
+offset_bottom = 93.0
 grow_horizontal = 2
 grow_vertical = 0
+theme_override_font_sizes/font_size = 60
 disabled = true
 text = "5"
+flat = true
 script = ExtResource("4_b1dd6")
