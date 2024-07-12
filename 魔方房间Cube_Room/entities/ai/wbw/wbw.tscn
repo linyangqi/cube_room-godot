@@ -6,7 +6,7 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k6oa"]
 albedo_color = Color(0, 0, 0, 1)
-emission_energy = 0.5
+emission_energy_multiplier = 0.5
 clearcoat_enabled = true
 distance_fade_mode = 3
 distance_fade_min_distance = 0.5

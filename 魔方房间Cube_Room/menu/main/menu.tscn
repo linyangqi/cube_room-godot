@@ -6,8 +6,8 @@
 [ext_resource type="Script" path="res://menu/main/exit_button.gd" id="4_p1dgg"]
 
 [sub_resource type="FontVariation" id="FontVariation_p46w6"]
-base_font = ExtResource("1_62kwq")
 fallbacks = Array[Font]([ExtResource("2_a0f25")])
+base_font = ExtResource("1_62kwq")
 
 [sub_resource type="Theme" id="Theme_bllg7"]
 default_font = SubResource("FontVariation_p46w6")

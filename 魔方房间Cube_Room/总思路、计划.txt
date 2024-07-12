@@ -73,4 +73,3 @@ https://docs.godotengine.org/en/latest/tutorials/3d/standard_material_3d.html
 7.20
 机关交互，使用玩家左右键吧？比如左键顺时针转右键逆时针转？
 需要射线
-

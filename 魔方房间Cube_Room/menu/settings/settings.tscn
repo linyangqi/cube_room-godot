@@ -2,7 +2,7 @@
 
 [ext_resource type="Theme" uid="uid://b1ksuspm4q4f6" path="res://menu/theme/main_theme.tres" id="1_0i51n"]
 [ext_resource type="Texture2D" uid="uid://hj6wx4ctsv7r" path="res://menu/main/backgroung_img.png" id="2_xhj7r"]
-[ext_resource type="PackedScene" path="res://menu/main/back_to_main_menu.tscn" id="3_dujmn"]
+[ext_resource type="PackedScene" uid="uid://beihq54y3rldy" path="res://menu/main/back_to_main_menu.tscn" id="3_dujmn"]
 
 [node name="Menu" type="Control"]
 anchor_right = 1.0

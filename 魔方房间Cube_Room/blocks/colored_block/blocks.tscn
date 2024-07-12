@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3]
+[gd_scene load_steps=13 format=3 uid="uid://bvf1ej0x6hu5b"]
 
 [ext_resource type="BoxMesh" uid="uid://bk1u0lq3ekpsn" path="res://blocks/colored_block/meshes/blue.tres" id="1_20hfw"]
 [ext_resource type="BoxMesh" uid="uid://bu5b6wcp620yw" path="res://blocks/colored_block/meshes/black.tres" id="1_cufwi"]
@@ -7,7 +7,7 @@
 [ext_resource type="BoxMesh" uid="uid://caiwtdkh2fe88" path="res://blocks/colored_block/meshes/red.tres" id="2_j6anm"]
 [ext_resource type="BoxMesh" uid="uid://ceg3ls3imkl2l" path="res://blocks/colored_block/meshes/purple.tres" id="3_f1e6i"]
 [ext_resource type="BoxMesh" uid="uid://dptd3381rnogl" path="res://blocks/colored_block/meshes/green.tres" id="4_yqjnp"]
-[ext_resource type="BoxMesh" path="res://blocks/colored_block/meshes/yellow.tres" id="5_a6haq"]
+[ext_resource type="BoxMesh" uid="uid://op5ohr7j4r63" path="res://blocks/colored_block/meshes/yellow.tres" id="5_a6haq"]
 [ext_resource type="BoxMesh" uid="uid://clvnjemotdj2u" path="res://blocks/colored_block/meshes/orange.tres" id="9_672kh"]
 [ext_resource type="BoxMesh" uid="uid://pa2ecqia6bxh" path="res://blocks/colored_block/meshes/cyan.tres" id="10_bfqws"]
 

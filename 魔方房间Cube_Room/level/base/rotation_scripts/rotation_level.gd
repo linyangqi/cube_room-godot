@@ -40,5 +40,3 @@ func rotate_level():
 	
 	#entity旋转
 	entities.rotate_entities(global_transform.origin - entities.global_transform.origin,axis,hight,expand)
-
-
