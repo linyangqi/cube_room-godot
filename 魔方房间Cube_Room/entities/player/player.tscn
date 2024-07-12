@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dywibsfvvvatd"]
+[gd_scene load_steps=9 format=3 uid="uid://dywibsfvvvatd"]
 
 [ext_resource type="Script" path="res://entities/player/player.gd" id="1_iisag"]
 [ext_resource type="Script" path="res://entities/player/camera_root.gd" id="2_s6cmj"]
@@ -7,7 +7,7 @@
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_8k6oa"]
 emission_enabled = true
 emission = Color(1, 1, 1, 1)
-emission_energy = 0.5
+emission_energy_multiplier = 0.5
 clearcoat_enabled = true
 distance_fade_mode = 3
 distance_fade_min_distance = 0.5
@@ -23,7 +23,7 @@ transparency = 1
 albedo_color = Color(1, 1, 0, 0.501961)
 emission_enabled = true
 emission = Color(1, 1, 0, 1)
-emission_energy = 0.3
+emission_energy_multiplier = 0.3
 distance_fade_mode = 3
 distance_fade_min_distance = 1.0
 distance_fade_max_distance = 0.5
@@ -34,8 +34,6 @@ size = Vector2(0.05, 0.05)
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_mhpco"]
 radius = 0.4
-
-[sub_resource type="CameraEffects" id="CameraEffects_a8bbp"]
 
 [node name="Player" type="CharacterBody3D" groups=["player"]]
 script = ExtResource("1_iisag")
@@ -53,7 +51,7 @@ mesh = SubResource("PlaneMesh_i4pe8")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("SphereShape3D_mhpco")
 
-[node name="CameraRoot" type="Position3D" parent="."]
+[node name="CameraRoot" type="Marker3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.3, 0)
 script = ExtResource("2_s6cmj")
 
@@ -67,7 +65,6 @@ script = ExtResource("3_fh70c")
 
 [node name="Camera" type="Camera3D" parent="CameraRoot/h/v/SpringArm3D"]
 transform = Transform3D(1, -8.88178e-16, -2.05104e-29, 8.88178e-16, 1, -5.96046e-08, 2.64698e-23, 5.96046e-08, 1, 0, 0, 0)
-effects = SubResource("CameraEffects_a8bbp")
 current = true
 
 [node name="Sight" type="RayCast3D" parent="CameraRoot/h/v"]

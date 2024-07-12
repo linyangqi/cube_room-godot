@@ -13,10 +13,9 @@ events = [SubResource("InputEventKey_kk1fa")]
 
 [node name="Level" instance=ExtResource("1_m8smp")]
 
-[node name="y_0" type="Position3D" parent="Rotations" index="0"]
+[node name="y_0" type="Marker3D" parent="Rotations" index="0"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16, 0, 0)
 script = ExtResource("2_xpcbf")
-axis = 0
 hight = 30
 expand = 20
 

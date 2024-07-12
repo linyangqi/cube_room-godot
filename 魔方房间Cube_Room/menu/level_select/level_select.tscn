@@ -9,28 +9,39 @@
 
 [sub_resource type="FontVariation" id="FontVariation_p46w6"]
 base_font = ExtResource("1_477re")
-fallbacks = [ExtResource("2_q38p5")]
+fallbacks = Array[Font]([ExtResource("2_q38p5")])
 
 [sub_resource type="Theme" id="Theme_7pvab"]
 default_font = SubResource("FontVariation_p46w6")
 
 [node name="LevelSelect" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 theme = SubResource("Theme_7pvab")
 
 [node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 color = Color(0.223529, 0.486275, 0.439216, 1)
 
 [node name="BackGround" type="TextureRect" parent="."]
 modulate = Color(1, 1, 1, 0.337255)
+layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_f80bu")
 
 [node name="Label" type="Label" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -512.0
@@ -45,11 +56,16 @@ horizontal_alignment = 1
 metadata/_edit_layout_mode = 1
 
 [node name="BackToMainMenu" parent="." instance=ExtResource("3_ulj0y")]
+layout_mode = 0
+anchors_preset = 0
+offset_left = -93.5
 offset_top = -140.0
+offset_right = 93.5
 offset_bottom = -103.0
 metadata/_edit_layout_mode = 1
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -63,16 +79,12 @@ grow_vertical = 2
 metadata/_edit_layout_mode = 1
 
 [node name="GridContainer" type="GridContainer" parent="ScrollContainer"]
-offset_right = 305.0
-offset_bottom = 93.0
+layout_mode = 2
 theme_override_constants/h_separation = 20
 columns = 6
 
 [node name="1" type="Button" parent="ScrollContainer/GridContainer"]
-offset_right = 45.0
-offset_bottom = 93.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "1
 "
@@ -81,11 +93,7 @@ script = ExtResource("4_b1dd6")
 scene_path = "res://level/formal_levels/level001.tscn"
 
 [node name="2" type="Button" parent="ScrollContainer/GridContainer"]
-offset_left = 65.0
-offset_right = 110.0
-offset_bottom = 93.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "2
 "
@@ -94,11 +102,7 @@ script = ExtResource("4_b1dd6")
 scene_path = "res://level/formal_levels/level002.tscn"
 
 [node name="3" type="Button" parent="ScrollContainer/GridContainer"]
-offset_left = 130.0
-offset_right = 175.0
-offset_bottom = 93.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "3"
 flat = true
@@ -106,11 +110,7 @@ script = ExtResource("4_b1dd6")
 scene_path = "res://level/formal_levels/level003.tscn"
 
 [node name="4" type="Button" parent="ScrollContainer/GridContainer"]
-offset_left = 195.0
-offset_right = 240.0
-offset_bottom = 93.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "4"
 flat = true
@@ -118,11 +118,7 @@ script = ExtResource("4_b1dd6")
 scene_path = "res://level/formal_levels/level004.tscn"
 
 [node name="5" type="Button" parent="ScrollContainer/GridContainer"]
-offset_left = 260.0
-offset_right = 305.0
-offset_bottom = 93.0
-grow_horizontal = 2
-grow_vertical = 0
+layout_mode = 2
 theme_override_font_sizes/font_size = 60
 disabled = true
 text = "5"

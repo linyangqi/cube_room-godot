@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://ld1vhuhi41g1"]
+[gd_scene load_steps=9 format=3 uid="uid://ld1vhuhi41g1"]
 
 [ext_resource type="Script" path="res://level/base/rotation_scripts/cube_system.gd" id="1_m661s"]
 [ext_resource type="PackedScene" uid="uid://dsqo8saqfbivw" path="res://entities/goal/goal.tscn" id="3_aw7yt"]
@@ -16,7 +16,6 @@ sky = SubResource("Sky_up50u")
 ambient_light_source = 3
 ambient_light_color = Color(0.713726, 0.741176, 0.615686, 1)
 reflected_light_source = 2
-auto_exposure_enabled = true
 ssr_enabled = true
 ssao_enabled = true
 ssil_enabled = true
@@ -24,8 +23,6 @@ sdfgi_enabled = true
 glow_enabled = true
 volumetric_fog_enabled = true
 adjustment_enabled = true
-
-[sub_resource type="CameraEffects" id="CameraEffects_uh5de"]
 
 [sub_resource type="GDScript" id="GDScript_qrasb"]
 script/source = "extends Node
@@ -108,7 +105,6 @@ script = ExtResource("1_m661s")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_66wfe")
-camera_effects = SubResource("CameraEffects_uh5de")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(0.902164, -0.347832, 0.255172, 0, 0.591507, 0.8063, -0.431393, -0.727415, 0.533636, 0, 15.3554, 0)
@@ -129,6 +125,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
 
 [node name="BackToMainMenu" parent="." instance=ExtResource("3_s5f8g")]
 modulate = Color(1, 1, 1, 0.196078)
+anchors_preset = 0
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
@@ -137,3 +134,5 @@ offset_left = 0.0
 offset_top = 0.0
 offset_right = 187.0
 offset_bottom = 37.0
+grow_horizontal = 1
+grow_vertical = 1
