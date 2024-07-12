@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="魔方房间 Cube Room"
-run/main_scene="res://menu/main/menu.tscn"
+run/main_scene="res://scenes/menu/main/menu.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
 [autoload]
 
-MenuMusic="*res://music/menu_music.tscn"
+MenuMusic="*res://scenes/music/menu_music.tscn"
 
 [display]
 
