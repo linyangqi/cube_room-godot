@@ -15,21 +15,21 @@ enum Axis {X = 0, Y = 1, Z = 2}
 @onready var player = entities.get_node("Player")
 #旋转方块是gird的事，但是旋转实体位置之类就可以单独分到这里了——不过还是放到另一个“Entities”节点里了
 #而且除了玩家以外，还有其他实体也应该能旋转的
-func get_rotation_box(center:Vector3i,axis:Axis,hight:int,expand:int)->AABB:
-	var start:Vector3i
-	var size:Vector3i
-	match axis :
-		X:
-			size = Vector3i(hight,2*expand+1,2*expand+1)
-			start = center+Vector3i(0,-expand,-expand)
-		Y:
-			size = Vector3i(2*expand+1,hight,2*expand+1)
-			start = center+Vector3i(-expand,0,-expand)
-		Z:
-			size = Vector3i(2*expand+1,2*expand+1,hight)
-			start = center+Vector3i(-expand,-expand,0)
-			
-	return AABB(start, size)
+#func get_rotation_box(center:Vector3i,axis:Axis,hight:int,expand:int)->AABB:
+	#var start:Vector3i
+	#var size:Vector3i
+	#match axis :
+		#X:
+			#size = Vector3i(hight,2*expand+1,2*expand+1)
+			#start = center+Vector3i(0,-expand,-expand)
+		#Y:
+			#size = Vector3i(2*expand+1,hight,2*expand+1)
+			#start = center+Vector3i(-expand,0,-expand)
+		#Z:
+			#size = Vector3i(2*expand+1,2*expand+1,hight)
+			#start = center+Vector3i(-expand,-expand,0)
+			#
+	#return AABB(start, size)
 
 
 

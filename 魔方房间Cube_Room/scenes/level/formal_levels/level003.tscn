@@ -36,6 +36,3 @@ script = ExtResource("2_es5kv")
 rotation_node = NodePath("../../Rotations/y_0")
 
 [node name="GridMap" parent="." index="5" instance=ExtResource("4_0bp46")]
-
-[node name="BackToMainMenu" parent="." index="6"]
-scene_path = "res://scenes/menu/main/menu.tscn"
