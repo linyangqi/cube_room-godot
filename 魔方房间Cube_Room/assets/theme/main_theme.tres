@@ -1,0 +1,6 @@
+[gd_resource type="Theme" load_steps=2 format=3 uid="uid://b1ksuspm4q4f6"]
+
+[ext_resource type="FontFile" uid="uid://dv2613jnwxdh0" path="res://assets/theme/fonts/COMICZ.TTF" id="1_ax2rg"]
+
+[resource]
+default_font = ExtResource("1_ax2rg")

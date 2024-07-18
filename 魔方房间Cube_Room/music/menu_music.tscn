@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://bucdlxe21ut7u"]
-
-[ext_resource type="AudioStream" uid="uid://bcw7k2mwh404u" path="res://music/幻幻.ogg" id="1_d2glj"]
-
-[node name="MenuMusic" type="AudioStreamPlayer"]
-stream = ExtResource("1_d2glj")
-autoplay = true
