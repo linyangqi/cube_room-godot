@@ -1,8 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://ld1vhuhi41g1"]
+[gd_scene load_steps=7 format=3 uid="uid://ld1vhuhi41g1"]
 
 [ext_resource type="Script" path="res://scripts/rotation_scripts/cube_system.gd" id="1_m661s"]
-[ext_resource type="PackedScene" uid="uid://dsqo8saqfbivw" path="res://scenes/entities/goal/goal.tscn" id="3_aw7yt"]
-[ext_resource type="PackedScene" uid="uid://dywibsfvvvatd" path="res://scenes/entities/player/player.tscn" id="3_ilmn2"]
 [ext_resource type="PackedScene" uid="uid://beihq54y3rldy" path="res://scenes/menu/main/back_to_main_menu.tscn" id="3_s5f8g"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_7eio8"]
@@ -110,16 +108,10 @@ environment = SubResource("Environment_66wfe")
 transform = Transform3D(0.902164, -0.347832, 0.255172, 0, 0.591507, 0.8063, -0.431393, -0.727415, 0.533636, 0, 15.3554, 0)
 shadow_enabled = true
 
-[node name="Rotations" type="Node" parent="."]
+[node name="RotationControllers" type="Node" parent="."]
 
 [node name="Entities" type="Node3D" parent="."]
 script = SubResource("GDScript_qrasb")
-
-[node name="Player" parent="Entities" instance=ExtResource("3_ilmn2")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3, 0)
-
-[node name="Goal" parent="Entities" instance=ExtResource("3_aw7yt")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 1, 0)
 
 [node name="Special" type="Node" parent="."]
 
