@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://bfjt7abfe6hmw"]
+
+[ext_resource type="Theme" uid="uid://b1ksuspm4q4f6" path="res://menu/theme/main_theme.tres" id="1_0i51n"]
+[ext_resource type="Texture2D" uid="uid://hj6wx4ctsv7r" path="res://menu/main/backgroung_img.png" id="2_xhj7r"]
+[ext_resource type="PackedScene" path="res://menu/main/back_to_main_menu.tscn" id="3_dujmn"]
+
+[node name="Menu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource("1_0i51n")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.223529, 0.486275, 0.439216, 1)
+
+[node name="BackGround" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.337255)
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("2_xhj7r")
+
+[node name="Label" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -512.0
+offset_right = 512.0
+offset_bottom = 74.0
+grow_horizontal = 2
+theme = ExtResource("1_0i51n")
+theme_type_variation = &"HeaderLarge"
+theme_override_font_sizes/font_size = 50
+text = "Settings 设置"
+horizontal_alignment = 1
+metadata/_edit_layout_mode = 1
+
+[node name="BackToMenu" parent="." instance=ExtResource("3_dujmn")]

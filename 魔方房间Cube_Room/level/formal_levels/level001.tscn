@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dyg8ofs6ucqup"]
+
+[ext_resource type="PackedScene" uid="uid://ld1vhuhi41g1" path="res://level/base/level_base.tscn" id="1_m8smp"]
+[ext_resource type="PackedScene" uid="uid://bvi2mxtxso4uw" path="res://level/grids/grid_example.tscn" id="2_nvtnn"]
+
+[node name="Level" instance=ExtResource("1_m8smp")]
+
+[node name="Goal" parent="Entities" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 1, 0)
+
+[node name="GridMap" parent="." index="5" instance=ExtResource("2_nvtnn")]

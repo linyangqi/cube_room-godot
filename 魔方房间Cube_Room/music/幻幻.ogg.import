@@ -1,0 +1,16 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOGGVorbis"
+uid="uid://bcw7k2mwh404u"
+path="res://.godot/imported/幻幻.ogg-bc53079ba5c8bfc74cb61579051435e4.oggvorbisstr"
+
+[deps]
+
+source_file="res://music/幻幻.ogg"
+dest_files=["res://.godot/imported/幻幻.ogg-bc53079ba5c8bfc74cb61579051435e4.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0
